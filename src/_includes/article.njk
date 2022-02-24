@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+
+<article>
+
+  <header>
+    <h1>{{ title }}</h1>
+    <p>Published on {{ page.date.toDateString() }}</p>
+  </header>
+
+  {{ content | safe }}
+
+</article>

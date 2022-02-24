@@ -1,0 +1,15 @@
+<nav id="navbar">
+  <ul>
+  {% for item in collections.menu %}
+    <li>
+      <a href="{{item.url}}">
+        {% if item.data.menuTitle %}
+          {{item.data.menuTitle}}
+        {% else %}
+          {{item.data.title}}
+        {% endif %}
+      </a>
+    </li>
+  {%- endfor -%}
+  </ul>
+</nav>

@@ -1,0 +1,58 @@
+---
+layout: page.njk
+tags: menu
+menuTitle: Blog
+title: Blog
+pagination:
+  data: collections.blog
+  size: 2
+  alias: posts
+---
+
+<hr />
+
+<h2>Featured Articles</h2>
+{% for post in collections.blogFeatured | reverse %}
+<article>
+  <h3>{{ post.data.title }}</h3>
+  <p>{{ post.date | luxonDate }}</p>
+  <p>{{ post.data.summary }}</p>
+  <a href="{{ post.url }}">Read More</a>
+</article>
+{% endfor %}
+
+<hr />
+
+<h2>Recent Articles</h2>
+{% for post in posts | reverse %}
+<article>
+  <h3>{{ post.data.title }}</h3>
+  <p>{{ post.date | luxonDate }}</p>
+  <p>{{ post.data.summary }}</p>
+  <a href="{{ post.url }}">Read More</a>
+</article>
+{% endfor %}
+
+{% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}">Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}">Next Page</a>
+{% endif %}
+
+<hr />
+
+<ul class="pagination">
+{% for item in pagination.pages %}
+  <li
+    {% if page.url == pagination.hrefs[ loop.index0 ] %}
+      class="active"
+      aria-current="page"
+    {% endif %}
+  >
+    <a href="{{ pagination.hrefs[ loop.index0 ] }}">
+      {{ loop.index }}
+    </a>
+  </li>
+{% endfor %}
+</ul>

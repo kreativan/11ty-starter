@@ -1,0 +1,33 @@
+---
+layout: base.njk
+tags: menu
+menuTitle: Home
+title: Eleventy - kreativan.dev
+---
+
+<h1>{{ title }}</h1>
+
+<p>
+  Wisi repellendus aperiam pretium labore laboris magnam. Dolore magna? Dui, assumenda diamlorem aute quis laoreet tincidunt, cumque facilisi? Magna expedita! Fermentum alias doloremque veniam faucibus? Nunc aliquid dictum consectetur quaerat. Congue suscipit cupiditate. Risus pharetra, adipiscing sociis penatibus, purus nullam. Perspiciatis pariatur mus fusce per animi dictum etiam fusce doloribus, consectetur incidunt commodo itaque! Esse provident alias et, ut similique, ornare pharetra malesuada. Ultricies? Pellentesque! Cillum donec. Corrupti itaque libero, vivamus quisquam, nihil asperiores lorem asperiores! Consectetur officiis? Arcu viverra maxime risus necessitatibus venenatis? Luctus beatae repudiandae habitasse similique est, magnam bibendum adipisci accusamus integer a magnis ex earum eius.
+</p>
+
+<h3>Pages</h3>
+
+<ul>
+{% for page in collections.pages %}
+  <li>
+    <a href="{{page.url}}">{{page.data.title}}</a>
+  </li>
+{%- endfor -%}
+</ul>
+
+<h3>Random People</h3>
+
+<ul>
+{% for person in people %}
+  <li>
+    <img src="{{ user.picture.thumbnail }}">
+    {{person.name.first}} {{person.name.last}}
+  </li>
+{%- endfor -%}
+</ul>
