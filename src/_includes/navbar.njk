@@ -1,15 +1,19 @@
+{% set navPages = collections.all | eleventyNavigation %}
+{% set baseUrl = page.url | baseUrl %}
+
 <nav id="navbar">
   <ul>
-  {% for item in collections.menu %}
-    <li>
-      <a href="{{item.url}}">
-        {% if item.data.menuTitle %}
-          {{item.data.menuTitle}}
-        {% else %}
-          {{item.data.title}}
-        {% endif %}
+  {% for item in navPages %}
+    <li
+      {% if (item.url == page.url) or (item.url == baseUrl) %}
+        class="active"
+        aria-current="page"
+      {% endif %}
+    >
+      <a href="{{ item.url }}">
+        {{ item.title }}
       </a>
     </li>
-  {%- endfor -%}
+  {% endfor %}
   </ul>
 </nav>

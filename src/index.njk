@@ -1,8 +1,11 @@
 ---
 layout: base.njk
 tags: menu
-menuTitle: Home
 title: Eleventy - kreativan.dev
+eleventyNavigation:
+  key: home
+  title: Home
+  order: 0
 ---
 
 <h1>{{ title }}</h1>
@@ -31,3 +34,5 @@ title: Eleventy - kreativan.dev
   </li>
 {%- endfor -%}
 </ul>
+
+<pre><code>{{ page | dump(2) }}</code></pre>
