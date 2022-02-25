@@ -2,6 +2,11 @@
 layout: base.njk
 ---
 
+<h3>Breadcrumbs</h3>
+{% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb("Article", { includeSelf: true }) %}
+
+{% include 'breadcrumbs.njk' %}
+
 <article>
 
   <header>

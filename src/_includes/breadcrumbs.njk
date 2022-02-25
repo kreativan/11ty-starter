@@ -1,0 +1,17 @@
+<!--
+<pre><code>
+  {{ breadcrumbs | dump(2) }}
+</code></pre>
+-->
+
+<ul class="breadcrumbs">
+  {% for item in breadcrumbs %}
+    <li>
+      {% if item.parentKey %}
+        <span>{{ item.title }}</span>
+      {% else %}
+        <a href="{{ item.url }}">{{ item.title }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</nav>

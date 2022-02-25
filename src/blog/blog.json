@@ -1,5 +1,4 @@
 {
   "layout": "article.njk",
-  "tags": "blog",
-  "parent": "blog"
+  "tags": "blog"
 }
