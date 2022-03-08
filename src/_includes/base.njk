@@ -7,16 +7,23 @@
   <title>{{ title }}</title>
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
   <script defer src="{{ '/assets/script.js' }}"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Jost:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
 
+<div id="wrapper" class="flex flex-col h-screen justify-between">
   {% include 'navbar.njk' %}
 
-  <main>
+  <main class="mb-auto">
     {{ content | safe }}
   </main>
 
   {% include 'footer.njk' %}
+</div>
 
 </body>
 </html>

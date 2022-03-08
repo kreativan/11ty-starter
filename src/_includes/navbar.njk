@@ -1,19 +1,33 @@
 {% set navPages = collections.all | eleventyNavigation %}
 {% set baseUrl = page.url | baseUrl %}
 
-<nav id="navbar">
-  <ul>
-  {% for item in navPages %}
-    <li
-      {% if (item.url == page.url) or (item.url == baseUrl) %}
-        class="active"
-        aria-current="page"
-      {% endif %}
-    >
-      <a href="{{ item.url }}">
-        {{ item.title }}
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
-</nav>
+<div id="header" class="border-b">
+  <div class="container">
+    <div class="flex justify-between items-center">
+
+      <div>
+        logo
+      </div>
+
+      <div>
+        <nav class="navbar">
+          <ul class="flex space-x-4">
+          {% for item in navPages %}
+            <li
+              {% if (item.url == page.url) or (item.url == baseUrl) %}
+                class="active text-sky-600"
+                aria-current="page"
+              {% endif %}
+            >
+              <a href="{{ item.url }}" class="flex items-center h-16 px-2 hover:text-sky-600">
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>  
+</div>

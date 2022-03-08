@@ -28,8 +28,9 @@ async function imageShortcode(src, alt, sizes) {
 module.exports = function(eleventyConfig) {
 
   // Passthrough copy files and watch targets
-  eleventyConfig.addPassthroughCopy("./src/assets/");
+  eleventyConfig.addPassthroughCopy("./src/assets/script.js");
   eleventyConfig.addWatchTarget("./src/assets/");
+  eleventyConfig.addWatchTarget('./tailwind.config.js');
 
   /**
    * Eleventy Navigation

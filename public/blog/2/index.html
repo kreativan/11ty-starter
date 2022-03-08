@@ -7,132 +7,153 @@
   <title>Blog</title>
   <link rel="stylesheet" href="/assets/style.css">
   <script defer src="/assets/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Jost:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
 
+<div id="wrapper" class="flex flex-col h-screen justify-between">
   
 
 
-<nav id="navbar">
-  <ul>
+<div id="header" class="border-b">
+  <div class="container">
+    <div class="flex justify-between items-center">
+
+      <div>
+        logo
+      </div>
+
+      <div>
+        <nav class="navbar">
+          <ul class="flex space-x-4">
+          
+            <li
+              
+            >
+              <a href="/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Home
+              </a>
+            </li>
+          
+            <li
+              
+            >
+              <a href="/pages/page-one/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Page One
+              </a>
+            </li>
+          
+            <li
+              
+            >
+              <a href="/pages/page-two/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Page Two
+              </a>
+            </li>
+          
+            <li
+              
+                class="active text-sky-600"
+                aria-current="page"
+              
+            >
+              <a href="/blog/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Blog
+              </a>
+            </li>
+          
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>  
+</div>
+
+  <main class="mb-auto">
+    
+<div class="section">
+  <div class="container">
+
+    
+    <h1 class="mb-10">Blog</h1>
+    
+
+    
+
+
+
+<article class="my-5">
+  <h2 class="text-3xl">Blog Post Four</h2>
+  <p class="text-xs my-2 text-neutral-500">February 23, 2022</p>
+  <p class="mb-2">Deserunt ea ullamco nulla labore. Ex dolor elit laborum sunt sit occaecat esse ex irure anim officia ad. Fugiat enim dolor fugiat enim do reprehenderit in esse do ut fugiat. Cupidatat ea ex mollit et proident velit aliqua voluptate occaecat consectetur anim non qui.</p>
+  <a href="/blog/blog-post-four/" class="italic hover:text-sky-600">
+    Read More
+  </a>
+</article>
+
+
+<hr class="my-5" />
+
+<ul class="flex space-x-3">
+
+  
+
   
     <li
       
     >
-      <a href="/">
-        Home
+      <a href="/blog/" class="hover:text-sky-600">
+        1
       </a>
     </li>
   
     <li
       
     >
-      <a href="/pages/page-one/">
-        Page One
+      <a href="/blog/1/" class="hover:text-sky-600">
+        2
       </a>
     </li>
   
     <li
       
-    >
-      <a href="/pages/page-two/">
-        Page Two
-      </a>
-    </li>
-  
-    <li
-      
-        class="active"
+        class="active text-sky-600"
         aria-current="page"
       
     >
-      <a href="/blog/">
-        Blog
+      <a href="/blog/2/" class="hover:text-sky-600">
+        3
       </a>
     </li>
   
-  </ul>
-</nav>
 
-  <main>
-    
-<h1>Blog</h1>
+  
+    <li class="hover:text-sky-600">
+      <a href="/blog/1/">
+        Previous Page
+      </a>
+    </li>
+  
 
-
-<hr />
-
-<h2>Featured Articles</h2>
-
-<article>
-  <h3>Blog Post Three</h3>
-  <p>February 22, 2022</p>
-  <p>Deserunt ea ullamco nulla labore. Ex dolor elit laborum sunt sit occaecat esse ex irure anim officia ad. Fugiat enim dolor fugiat enim do reprehenderit in esse do ut fugiat. Cupidatat ea ex mollit et proident velit aliqua voluptate occaecat consectetur anim non qui.</p>
-  <a href="/blog/blog-post-three/">Read More</a>
-</article>
-
-<article>
-  <h3>Blog Post One</h3>
-  <p>February 20, 2022</p>
-  <p>Do nulla culpa esse dolore ea labore minim aute culpa cupidatat magna sint laboris. Non ea minim minim laborum consectetur eu consequat pariatur. Velit fugiat culpa culpa incididunt exercitation occaecat dolore laborum excepteur adipisicing reprehenderit occaecat eu cupidatat. Dolor est ex minim ea proident fugiat enim. Id id in excepteur ex incididunt aute sunt minim. Ex non tempor consectetur aliqua quis amet dolore voluptate nulla ex velit consectetur proident.</p>
-  <a href="/blog/blog-port-one/">Read More</a>
-</article>
-
-
-<hr />
-
-<h2>Recent Articles</h2>
-
-<article>
-  <h3>Blog Post Four</h3>
-  <p>February 23, 2022</p>
-  <p>Deserunt ea ullamco nulla labore. Ex dolor elit laborum sunt sit occaecat esse ex irure anim officia ad. Fugiat enim dolor fugiat enim do reprehenderit in esse do ut fugiat. Cupidatat ea ex mollit et proident velit aliqua voluptate occaecat consectetur anim non qui.</p>
-  <a href="/blog/blog-post-four/">Read More</a>
-</article>
-
-
-
-  <a href="/blog/1/">Previous Page</a>
-
-
-
-<hr />
-
-<ul class="pagination">
-
-  <li
-    
-  >
-    <a href="/blog/">
-      1
-    </a>
-  </li>
-
-  <li
-    
-  >
-    <a href="/blog/1/">
-      2
-    </a>
-  </li>
-
-  <li
-    
-      class="active"
-      aria-current="page"
-    
-  >
-    <a href="/blog/2/">
-      3
-    </a>
-  </li>
 
 </ul>
 
+  </div>
+</div>
+
   </main>
 
-  <footer>
-  <p>&copy; 2022 kreativan.dev</p>
+  <footer class="section bg-gray-800 text-gray-400 py-10">
+  <div class="container">
+    <p>&copy; 2022 kreativan.dev</p>
+  </div>
 </footer>
+</div>
 
 </body>
 </html>

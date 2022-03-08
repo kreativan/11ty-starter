@@ -7,65 +7,96 @@
   <title>Page Two</title>
   <link rel="stylesheet" href="/assets/style.css">
   <script defer src="/assets/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Jost:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
 
+<div id="wrapper" class="flex flex-col h-screen justify-between">
   
 
 
-<nav id="navbar">
-  <ul>
-  
-    <li
-      
-    >
-      <a href="/">
-        Home
-      </a>
-    </li>
-  
-    <li
-      
-    >
-      <a href="/pages/page-one/">
-        Page One
-      </a>
-    </li>
-  
-    <li
-      
-        class="active"
-        aria-current="page"
-      
-    >
-      <a href="/pages/page-two/">
-        Page Two
-      </a>
-    </li>
-  
-    <li
-      
-    >
-      <a href="/blog/">
-        Blog
-      </a>
-    </li>
-  
-  </ul>
-</nav>
+<div id="header" class="border-b">
+  <div class="container">
+    <div class="flex justify-between items-center">
 
-  <main>
+      <div>
+        logo
+      </div>
+
+      <div>
+        <nav class="navbar">
+          <ul class="flex space-x-4">
+          
+            <li
+              
+            >
+              <a href="/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Home
+              </a>
+            </li>
+          
+            <li
+              
+            >
+              <a href="/pages/page-one/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Page One
+              </a>
+            </li>
+          
+            <li
+              
+                class="active text-sky-600"
+                aria-current="page"
+              
+            >
+              <a href="/pages/page-two/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Page Two
+              </a>
+            </li>
+          
+            <li
+              
+            >
+              <a href="/blog/" class="flex items-center h-16 px-2 hover:text-sky-600">
+                Blog
+              </a>
+            </li>
+          
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>  
+</div>
+
+  <main class="mb-auto">
     
-<h1>Page Two</h1>
+<div class="section">
+  <div class="container">
 
-<p>Qui enim voluptate ut pariatur occaecat irure velit ad proident adipisicing Lorem adipisicing. Consequat pariatur veniam duis nisi voluptate non laborum nisi cillum sit nostrud proident mollit non. Tempor consectetur esse ut et consequat velit quis pariatur elit ullamco.</p>
+    
+    <h1 class="mb-10">Page Two</h1>
+    
 
+    <p>Qui enim voluptate ut pariatur occaecat irure velit ad proident adipisicing Lorem adipisicing. Consequat pariatur veniam duis nisi voluptate non laborum nisi cillum sit nostrud proident mollit non. Tempor consectetur esse ut et consequat velit quis pariatur elit ullamco.</p>
+
+
+  </div>
+</div>
 
   </main>
 
-  <footer>
-  <p>&copy; 2022 kreativan.dev</p>
+  <footer class="section bg-gray-800 text-gray-400 py-10">
+  <div class="container">
+    <p>&copy; 2022 kreativan.dev</p>
+  </div>
 </footer>
+</div>
 
 </body>
 </html>

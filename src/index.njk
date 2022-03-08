@@ -1,38 +1,57 @@
 ---
 layout: base.njk
 tags: menu
-title: Eleventy - kreativan.dev
+title: Eleventy
+subtitle: kreativan.dev
 eleventyNavigation:
   key: home
   title: Home
   order: 0
 ---
 
-<h1>{{ title }}</h1>
+<div class="section">
+  <div class="container">
 
-<p>
-  Wisi repellendus aperiam pretium labore laboris magnam. Dolore magna? Dui, assumenda diamlorem aute quis laoreet tincidunt, cumque facilisi? Magna expedita! Fermentum alias doloremque veniam faucibus? Nunc aliquid dictum consectetur quaerat. Congue suscipit cupiditate. Risus pharetra, adipiscing sociis penatibus, purus nullam. Perspiciatis pariatur mus fusce per animi dictum etiam fusce doloribus, consectetur incidunt commodo itaque! Esse provident alias et, ut similique, ornare pharetra malesuada. Ultricies? Pellentesque! Cillum donec. Corrupti itaque libero, vivamus quisquam, nihil asperiores lorem asperiores! Consectetur officiis? Arcu viverra maxime risus necessitatibus venenatis? Luctus beatae repudiandae habitasse similique est, magnam bibendum adipisci accusamus integer a magnis ex earum eius.
-</p>
+    <h1 class="md:text-8xl">
+      <span class="font-extrabold italic">{{ title }}</span>
+    </h1>
 
-<h3>Pages</h3>
+    <h2 class="md:text-3xl font-light italic">{{ subtitle }}</h2>
 
-<ul>
-{% for page in collections.pages %}
-  <li>
-    <a href="{{page.url}}">{{page.data.title}}</a>
-  </li>
-{%- endfor -%}
-</ul>
+    <p class="mt-10">
+      Wisi repellendus aperiam pretium labore laboris magnam. Dolore magna? Dui, assumenda diamlorem aute quis laoreet tincidunt, cumque facilisi? Magna expedita! Fermentum alias doloremque veniam faucibus? Nunc aliquid dictum consectetur quaerat. Congue suscipit cupiditate. Risus pharetra, adipiscing sociis penatibus, purus nullam. Perspiciatis pariatur mus fusce per animi dictum etiam fusce doloribus, consectetur incidunt commodo itaque! Esse provident alias et, ut similique, ornare pharetra malesuada. Ultricies? Pellentesque! Cillum donec. Corrupti itaque libero, vivamus quisquam, nihil asperiores lorem asperiores! Consectetur officiis? Arcu viverra maxime risus necessitatibus venenatis? Luctus beatae repudiandae habitasse similique est, magnam bibendum adipisci accusamus integer a magnis ex earum eius.
+    </p>
 
-<h3>Random People</h3>
+    <h3 class="group mt-10 mb-5 font-light italic">
+      Loop Trough <span class="font-extrabold group-hover:text-sky-600">Pages</span> Collection
+    </h3>
 
-<ul>
-{% for person in people %}
-  <li>
-    <img src="{{ user.picture.thumbnail }}">
-    {{person.name.first}} {{person.name.last}}
-  </li>
-{%- endfor -%}
-</ul>
+    <ul class="list-disc list-inside mt-5">
+    {% for page in collections.pages %}
+      <li class="hover:text-sky-600">
+        <a href="{{page.url}}">{{page.data.title}}</a>
+      </li>
+    {%- endfor -%}
+    </ul>
 
-<pre><code>{{ page | dump(2) }}</code></pre>
+    <h3 class="group font-light italic mt-10">
+      Get <span class="font-extrabold group-hover:text-sky-600">Random People</span> from api end-point
+    </h3>
+
+    <ul class="list-decimal list-inside mt-5">
+    {% for person in people %}
+      <li>
+        {{person.name.first}} {{person.name.last}}
+      </li>
+    {%- endfor -%}
+    </ul>
+
+    <h3 class="text-xl italic mt-10 mb-3">Page <span class="font-extrabold italic">dump</span><h3>
+
+    <div>
+      <pre class="bg-neutral-100 p-5 text-sm"><code>{{ page | dump(2) }}</code></pre>
+    </div>
+
+
+  </div>
+</div>

@@ -1,4 +1,36 @@
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html {
+    font-size: 20px;
+    @apply text-base-800 font-base;
+  }
+
+  h1 {
+    @apply md:text-6xl text-4xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  .section {
+    @apply py-20;
+  }
+
+  .section-s {
+    @apply py-10;
+  }
+
+  .section-l {
+    @apply py-32;
+  }
+
 }

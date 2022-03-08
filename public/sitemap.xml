@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>/blog/blog-port-one/</loc>
+    <loc>https://www.kreativan.dev/blog/blog-port-one/</loc>
     <lastmod>2022-02-20T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>/blog/blog-post-two/</loc>
+    <loc>https://www.kreativan.dev/blog/blog-post-two/</loc>
     <lastmod>2022-02-21T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>/blog/blog-post-three/</loc>
+    <loc>https://www.kreativan.dev/blog/blog-post-three/</loc>
     <lastmod>2022-02-22T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>/blog/blog-post-five/</loc>
+    <loc>https://www.kreativan.dev/blog/blog-post-five/</loc>
     <lastmod>2022-02-23T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>/blog/blog-post-four/</loc>
+    <loc>https://www.kreativan.dev/blog/blog-post-four/</loc>
     <lastmod>2022-02-23T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>/</loc>
-    <lastmod>2022-02-24T09:21:36.559Z</lastmod>
+    <loc>https://www.kreativan.dev/blog/</loc>
+    <lastmod>2022-03-07T17:19:23.554Z</lastmod>
   </url>
 
   <url>
-    <loc>/pages/page-one/</loc>
-    <lastmod>2022-02-24T09:44:00.888Z</lastmod>
+    <loc>https://www.kreativan.dev/</loc>
+    <lastmod>2022-03-07T17:19:23.557Z</lastmod>
   </url>
 
   <url>
-    <loc>/pages/page-two/</loc>
-    <lastmod>2022-02-24T09:45:57.448Z</lastmod>
+    <loc>https://www.kreativan.dev/pages/page-one/</loc>
+    <lastmod>2022-03-07T17:19:23.557Z</lastmod>
   </url>
 
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2022-02-24T11:13:41.395Z</lastmod>
+    <loc>https://www.kreativan.dev/pages/page-two/</loc>
+    <lastmod>2022-03-07T17:19:23.558Z</lastmod>
   </url>
 
 </urlset>
