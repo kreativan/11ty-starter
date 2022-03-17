@@ -5,10 +5,14 @@ const { DateTime } = require("luxon");
 // 11ty Image 
 //
 const Image = require("@11ty/eleventy-img");
-async function imageShortcode(src, alt, sizes) {
+async function imageShortcode(src, alt, size, format, sizes) {
+
+  const imgFormat = format ? format : null;
+  const imgSize = size ? size : null;
+
   let metadata = await Image(src, {
-    widths: [300, 600],
-    formats: ["webp", "jpeg"]
+    widths: [imgSize],
+    formats: ["webp", imgFormat],
   });
 
   let imageAttributes = {
@@ -43,12 +47,13 @@ module.exports = function(eleventyConfig) {
   /**
    * Eleventy Image 
    * @examples
+   * {% image "image_url" "alt_text", "image_size", "image_format", "sources" %}
    * {% image "./src/images/cat.jpg", "my photo" %}
-   * {% image "./src/images/cat.jpg", "my photo", "(min-width: 30em) 50vw, 100vw" %}
+   * {% image "./src/images/cat.jpg", "my photo", "640", "jpg", "(min-width: 30em) 50vw, 100vw" %}
    */
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addJavaScriptFunction("image", imageShortcode);
-
+	
   /**
    * Buster
    * Add timestamp at the end of the filename.
